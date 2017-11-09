@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../layer-v3.1.0/layer/mobile/need/layer.css">
+    <link rel="stylesheet" href="../layui-v2.1.5/layui/css/layui.css">
+    <script src="../layui-v2.1.5/layui/layui.js"></script>
+    <script src="../layui-v2.1.5/layui/lay/modules/laypage.js"></script>
+    <script src="../js/report.js"></script>
+    <script src="../js/AjaxStep.js"></script>
+    <script src="../js/factory.js"></script>
+    <script src="../js/save.js"></script>
+    <script src="../layer-v3.1.0/layer/layer.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap/bootstrap.js"></script>
+    <script src="../js/print.js"></script>
+    <script src="../js/jquery.jqprint-0.3.js"></script>
+    <script src="../js/export.js"></script>
+    <script>
+        $(function () {
+            var data = {"flightNo":$("#flightno").val(),"pageNo":1,"pageSize":12,"startDate":$("#startdate").val(),"endDate":$("#enddate").val()};
+            report.listFlight('http://localhost:63342/signReport/signReport/flightlist.json',data);
+        })
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid report">
+        <div class="row">
+            <div class="col-md-1">
+                <img src="../img/qd_icon.png">
+            </div>
+            <div class="col-md-2">
+                <span class="h">电子签单</span>
+            </div>
+            <div class="col-md-1 col-md-offset-7">
+                <img src="../img/news.png">
+            </div>
+            <div class="col-md-1">
+                <img src="../img/user.png" alt = "">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid condition">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+                <span>航班号</span><input class="f-i" id="flightno">
+            </div>
+            <div class="col-md-3">
+                <span>日期</span><input class="d-i" id="startdate">-<input class="d-i" id="enddate">
+            </div>
+            <div class="col-md-1">
+                <span class="reset">重置</span>
+            </div>
+            <div class="col-md-1">
+                <img src="../img/search.png">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="f">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-offset-2" id="page"></div>
+        </div>
+    </div>
+</body>
+</html>

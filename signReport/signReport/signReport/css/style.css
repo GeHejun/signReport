@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body {background-color: #eeeeee;}
+.report {background: white;line-height: 72px}
+.h {font-size: 24px}
+.condition {background: white;line-height: 60px;margin-top: 5px}
+.condition input{height: 30px;border: 1px solid #eeeeee;border-radius: 5px}
+.f-i{width: 60%}
+.d-i{width: 40%}
+.condition span{margin-right: 5px;font-size: 18px;color: #eeeeee}
+.f-card {background: white;border-radius: 10px;height: 180px;margin-top: 20px;}
+.r {background: #eeeeee;height: 100%;width: 100%;}
+.r-card {background: white;border-radius: 10px;height: 180px;margin-top: 20px;}
+.r-t {text-align: center}
+.r-s-p {text-align: right}
+.s-c-t-l {margin: 0 auto;width: 80%}
+.t-d {text-align: left}
+

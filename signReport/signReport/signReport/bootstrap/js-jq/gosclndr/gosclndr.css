@@ -1,0 +1,102 @@
+@CHARSET "UTF-8";
+/* @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono); */
+* {
+    margin: 0;
+}
+.clearfix{
+}
+.clndr {
+    background-color: #ebebeb;
+    font-weight: 700;
+    /* -moz-box-shadow: 0px 4px 0 #343434;
+    -webkit-box-shadow: 0px 4px 0 #343434;
+    box-shadow: 0px 4px 0 #343434; */
+}
+.clndr .clndr-grid {
+	width: 100%;
+    white-space: nowrap;
+	overflow: hidden;
+	overflow-x: auto; /* 1 */
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-overflow-scrolling: touch; /* 2 */
+	text-align: justify; /* 3 */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+.clndr .clndr-grid .days-of-the-week {
+}
+.clndr .clndr-grid .days-person {
+    height: 40px;
+}
+.clndr .clndr-grid .days-of-the-week .header-day {
+    background-color: #1ab394;
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+/*     border-right: 2px solid white; */
+}
+.clndr .clndr-grid .days {
+}
+.clndr .clndr-grid .days .day, .clndr .clndr-grid .days .empty {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    padding: 10px 0;
+    text-align: center;
+    color: #4f4f4f;
+    background-color: #ebebeb;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background-image: url(img/triangle.svg);
+    background-size: cover;
+    background-position: center;
+}
+.clndr .clndr-grid .days-person{
+ }
+.clndr .clndr-grid .days-person .day{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    padding: 10px 0;
+    text-align: center;
+    color: #4f4f4f;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.clndr .clndr-grid .days-person .person-day {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #4f4f4f;
+    background-color: #ebebeb;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+/*     background-image: url(img/triangle.svg); */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.clndr .clndr-grid .days .today {
+    background-color: white;
+    background-image: none;
+}
+.clndr .clndr-grid .days .day.adjacent-month .day-number, .clndr .clndr-grid .days .empty.adjacent-month .day-number {
+	align: center;
+    opacity: 0.3;
+}
+.work-day{
+	background-color:#1ab394;
+}
+.clndr .clndr-grid .unactive{
+    background-color: #f8ac59;
+}
